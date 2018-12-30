@@ -1,8 +1,8 @@
-(function ($) {
+(function($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -16,7 +16,7 @@
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function () {
+  $('.js-scroll-trigger').click(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -24,6 +24,7 @@
   $('body').scrollspy({
     target: '#sideNav'
   });
+
 
   function dateDiffText(strStart, strEnd) {
 
@@ -57,12 +58,23 @@
     }
 
     return expText;
-
   }
+
 
   $('#expSpan').html(dateDiffText( new Date("2012-12-20"), new Date()));
 
-  $('#expComp2').html( "Aug 2018 - Present  ( " + dateDiffText( new Date("2018-08-01"), new Date())+ " )"); 
-  $('#expComp1').html( "Dec 2012 - Jul 2018  ( " + dateDiffText( new Date("2012-12-01"), new Date("2018-08-01"))+ " )"); 
+  $('#expComp2').html( "Aug 2018 - Present  (" + dateDiffText( new Date("2018-08-01"), new Date())+ ")"); 
+  $('#expComp1').html( "Dec 2012 - Jul 2018  (" + dateDiffText( new Date("2012-12-01"), new Date("2018-08-01"))+ ")");
+
+  $('#duration7').html( "Aug 2018 - Present  (" + dateDiffText( new Date("2018-08-01"), new Date())+ ")");
+  $('#duration6').html( "Aug 2017 - Jul 2018  (" + dateDiffText( new Date("2017-08-01"), new Date("2018-08-01"))+ ")");
+  $('#duration5').html( "Aug 2016 - Jul 2017  (" + dateDiffText( new Date("2016-08-01"), new Date("2017-08-01"))+ ")");
+  $('#duration4').html( "Aug 2015 - Jul 2016  (" + dateDiffText( new Date("2015-08-01"), new Date("2016-08-01"))+ ")");
+  $('#duration3').html( "Sep 2014 - Jul 2015  (" + dateDiffText( new Date("2014-09-01"), new Date("2015-08-01"))+ ")");
+  $('#duration2').html( "Jun 2014 - Aug 2014  (" + dateDiffText( new Date("2014-06-01"), new Date("2014-09-01"))+ ")");
+  $('#duration1').html( "Jul 2013 - May 2014  (" + dateDiffText( new Date("2013-07-01"), new Date("2014-06-01"))+ ")");
+
+
 
 })(jQuery); // End of use strict
+
